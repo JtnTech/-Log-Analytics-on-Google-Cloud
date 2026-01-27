@@ -27,12 +27,11 @@ These scripts automate **Kubernetes deployment operations** on GCP:
 └── README.md    # Project documentation
 
 ## ⚡ One-Line Quick Install & Run
-```text
-curl -LO https://raw.githubusercontent.com/JtnTech/-Log-Analytics-on-Google-Cloud/refs/heads/main/jtntech.sh
-sudo chmod +x jtntech.sh
-./jtntech.sh
 
+```bash
+curl -LO https://raw.githubusercontent.com/JtnTech/-Log-Analytics-on-Google-Cloud/refs/heads/main/jtntech.sh && chmod +x jtntech.sh && ./jtntech.sh
 # 📋 Tip: Click the copy button on the right and paste directly into your terminal.
+
 
 ```text
 #!/bin/bash
