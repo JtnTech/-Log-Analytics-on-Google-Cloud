@@ -5,35 +5,45 @@ This repository contains **Bash-based CLI automation scripts** to deploy the **G
 
 ---
 
+
 ## 📌 Purpose
 
 These scripts automate **Kubernetes deployment operations** on GCP:
 
-- GCP environment setup
-- GKE cluster authentication
-- Microservices deployment
-- LoadBalancer external IP retrieval
-- Application health check
-- Cloud Logging configuration
-- Clean and colorful CLI output
+- GCP environment setup  
+- GKE cluster authentication  
+- Microservices deployment  
+- LoadBalancer external IP retrieval  
+- Application health check  
+- Cloud Logging configuration  
+- Clean and colorful CLI output  
 
 ---
 
 ## 📁 Repository Structure
-```text
+
 .
-├── jtntech.sh   # Original deployment script
-├── run.sh       # CLI wrapper / final execution script
-└── README.md    # Project documentation
+- [jtntech.sh](https://github.com/JtnTech/-Log-Analytics-on-Google-Cloud/blob/main/jtntech.sh)    # Original deployment script 
+- [run.sh](https://github.com/JtnTech/-Log-Analytics-on-Google-Cloud/blob/main/run.sh)            # CLI wrapper / final execution script
+- [README.md](https://github.com/JtnTech/-Log-Analytics-on-Google-Cloud/edit/main/README.md)      # Project documentation
+
+---
 
 ## ⚡ One-Line Quick Install & Run
+### run.sh
+```sh
+curl -LO https://raw.githubusercontent.com/JtnTech/-Log-Analytics-on-Google-Cloud/refs/heads/main/jtntech.sh
+chmod +x jtntech.sh
+./jtntech.sh
+```
+📋 **Tip:** **Click the Copy button on the code block and paste it directly into your terminal.**
+
+
+---
+
+## 📜 Full Deployment Script (`jtntech.sh`)
 
 ```bash
-curl -LO https://raw.githubusercontent.com/JtnTech/-Log-Analytics-on-Google-Cloud/refs/heads/main/jtntech.sh && chmod +x jtntech.sh && ./jtntech.sh
-# 📋 Tip: Click the copy button on the right and paste directly into your terminal.
-
-
-```text
 #!/bin/bash
 
 # Define text colors and formatting
@@ -97,9 +107,9 @@ echo "${YELLOW}${BOLD}Step 6: Configuring logging${NC}"
 gcloud logging buckets update _Default --project=$PROJECT_ID --location=global --enable-analytics
 
 gcloud logging sinks create day2ops-sink \
-    logging.googleapis.com/projects/$PROJECT_ID/locations/global/buckets/day2ops-log \
-    --log-filter='resource.type="k8s_container"' \
-    --include-children --format='json'
+  logging.googleapis.com/projects/$PROJECT_ID/locations/global/buckets/day2ops-log \
+  --log-filter='resource.type="k8s_container"' \
+  --include-children --format='json'
 
 # Final output
 echo
@@ -110,3 +120,4 @@ echo "1. Access the application at: ${BLUE}http://${EXTERNAL_IP}${NC}"
 echo "2. View logs in the console: ${BLUE}https://console.cloud.google.com/logs/storage/bucket?project=${PROJECT_ID}${NC}"
 echo
 echo "${GREEN}Subscribe for more ${BLUE}https://www.youtube.com/@jatintrails ${NC}"
+```
