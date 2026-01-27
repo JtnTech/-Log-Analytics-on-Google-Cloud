@@ -20,14 +20,19 @@ These scripts automate **Kubernetes deployment operations** on GCP:
 ---
 
 ## 📁 Repository Structure
-
-```text
 .
 ├── jtntech.sh   # Original deployment script
 ├── run.sh       # CLI wrapper / final execution script
 └── README.md    # Project documentation
 
+⚡ One-Line Quick Install & Run
+```curl -LO https://raw.githubusercontent.com/JtnTech/-Log-Analytics-on-Google-Cloud/refs/heads/main/jtntech.sh
+sudo chmod +x jtntech.sh
+./jtntech.sh
 
+📋 Tip: Click the copy button on the right and paste directly into your terminal.
+
+```text
 #!/bin/bash
 
 # Define text colors and formatting
