@@ -121,3 +121,13 @@ echo "2. View logs in the console: ${BLUE}https://console.cloud.google.com/logs/
 echo
 echo "${GREEN}Subscribe for more ${BLUE}https://www.youtube.com/@jatintrails ${NC}"
 ```
+
+# 🔗 Connect with JtnTech
+
+📺 **YouTube:** https://www.youtube.com/@jatintrails
+
+💻 **GitHub:** https://github.com/JtnTech
+
+- ⭐ If this repo helped you, don’t forget to star it and subscribe!
+
+  
