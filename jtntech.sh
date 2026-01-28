@@ -1,5 +1,4 @@
 🧾 # Full Deployment Script
-
 📌 # Below is the complete script used in this project:
 
 #!/bin/bash
